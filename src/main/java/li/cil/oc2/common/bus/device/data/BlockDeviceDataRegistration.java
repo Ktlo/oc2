@@ -1,6 +1,7 @@
 package li.cil.oc2.common.bus.device.data;
 
 import li.cil.oc2.api.bus.device.data.BlockDeviceData;
+import li.cil.oc2.api.bus.device.data.Firmware;
 import li.cil.oc2.common.util.RegistryUtils;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,6 +20,8 @@ public final class BlockDeviceDataRegistration {
     ///////////////////////////////////////////////////////////////////
 
     public static final RegistryObject<BlockDeviceData> BUILDROOT = INITIALIZER.register("buildroot", BuildrootBlockDeviceData::new);
+
+    public static final RegistryObject<BlockDeviceData> PYTHON = INITIALIZER.register("python", PythonBlockDeviceData::new);
 
     ///////////////////////////////////////////////////////////////////
 

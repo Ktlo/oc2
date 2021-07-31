@@ -54,6 +54,9 @@ public final class Items {
     public static final RegistryObject<HardDriveWithExternalDataItem> HARD_DRIVE_CUSTOM = register("hard_drive_buildroot", () ->
             new HardDriveWithExternalDataItem(BlockDeviceDataRegistration.BUILDROOT.getId(), DyeColor.BROWN));
 
+    public static final RegistryObject<HardDriveWithExternalDataItem> HARD_DRIVE_PYTHON = register("hard_drive_python", () ->
+            new HardDriveWithExternalDataItem(BlockDeviceDataRegistration.PYTHON.getId(), DyeColor.RED));
+
     public static final RegistryObject<FlashMemoryItem> FLASH_MEMORY = register("flash_memory", () ->
             new FlashMemoryItem(4 * Constants.KILOBYTE));
     public static final RegistryObject<FlashMemoryWithExternalDataItem> FLASH_MEMORY_CUSTOM = register("flash_memory_buildroot", () ->
@@ -64,6 +67,7 @@ public final class Items {
 
     public static final RegistryObject<Item> REDSTONE_INTERFACE_CARD = register("redstone_interface_card");
     public static final RegistryObject<Item> NETWORK_INTERFACE_CARD = register("network_interface_card");
+    public static final RegistryObject<Item> REAL_NETWORK_INTERFACE_CARD = register("real_network_interface_card");
     public static final RegistryObject<Item> FILE_IMPORT_EXPORT_CARD = register("file_import_export_card");
 
     public static final RegistryObject<Item> INVENTORY_OPERATIONS_MODULE = register("inventory_operations_module");

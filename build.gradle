@@ -44,6 +44,7 @@ archivesBaseName = "${mod_name.replace(' ', '-')}-MC${minecraft_version}-Forge"
 java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
 repositories {
+    maven { url 'https://mvn.handtruth.com' }
     mavenCentral()
     maven { url 'https://dvs1.progwml6.com/files/maven' } // JEI
     maven { url 'https://maven.cil.li/' } // Sedna
@@ -60,6 +61,7 @@ dependencies {
     implementation "li.cil.ceres:ceres:0.0.2+20"
     implementation "li.cil.sedna:sedna:1.0.1+101"
     implementation "li.cil.sedna:sedna-buildroot:0.0.1+15"
+    implementation "com.handtruth.mc.oc2:sedna-buildroot-python:0.0.1+42d8cdc"
 
     compileOnly fg.deobf("li.cil.markdown_manual:MarkdownManual:MC${minecraft_version}-Forge-${manual_version}:api")
     runtimeOnly fg.deobf("li.cil.markdown_manual:MarkdownManual:MC${minecraft_version}-Forge-${manual_version}")
@@ -113,6 +115,9 @@ minecraft {
                 oc2 {
                     source sourceSets.main
                 }
+            }
+            if (project.hasProperty("appArgs")) {
+                args Eval.me(appArgs)
             }
         }
 

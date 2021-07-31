@@ -39,6 +39,7 @@ public final class Providers {
         ITEM_DEVICE_PROVIDERS.register("flash_memory_custom", FlashMemoryWithExternalDataItemDeviceProvider::new);
         ITEM_DEVICE_PROVIDERS.register("redstone_interface_card", RedstoneInterfaceCardItemDeviceProvider::new);
         ITEM_DEVICE_PROVIDERS.register("network_interface_card", NetworkInterfaceCardItemDeviceProvider::new);
+        ITEM_DEVICE_PROVIDERS.register("real_network_interface_card", RealNetworkInterfaceCardItemDeviceProvider::new);
         ITEM_DEVICE_PROVIDERS.register("file_import_export", FileImportExportCardItemDeviceProvider::new);
 
         ITEM_DEVICE_PROVIDERS.register("inventory_operations_module", InventoryOperationsModuleDeviceProvider::new);
